@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+
+    style 
+        include style.css
+
+    body 
+        h1= name
+        ul 
+            -for (var x=0; x<3; x++)
+                li item
+
+    div(class="main")
+        ul 
+            each item in tasks
+                
+                li 
+                    input(type="checkbox")
+                    span= item
+                    
+
+        form(action="", method="post") 
+            input(type="text", name="task" autofocus)
+            input(type="submit", value="Save")
